@@ -126,9 +126,8 @@
 <body>
     <div class="container">
 
-        <!-- 佛像 -->
         <img class="buddha-image"
-             src="https://raw.githubusercontent.com/liukai2026/dizangwang/main/dizang.jpg"
+             src="https://liukai2026.github.io/dizangwang/dizang.jpg"
              alt="地藏王菩萨"
              loading="lazy"
         />
@@ -136,15 +135,13 @@
         <h1>南无地藏王菩萨</h1>
         <div class="subtitle">—— 本愿经 · 法音宣流 ——</div>
 
-        <!-- 经文容器 -->
         <div class="sutra-container" id="jingwenDisplay">
             <p style="color:#9a8b78; text-align:center;">正在加载经文……</p>
         </div>
 
-        <!-- 音频 -->
         <div class="audio-wrapper">
             <audio controls loop autoplay>
-                <source src="https://raw.githubusercontent.com/liukai2026/dizangwang/main/dizangjing.mp3" type="audio/mpeg">
+                <source src="https://liukai2026.github.io/dizangwang/dizangjing.mp3" type="audio/mpeg">
                 您的浏览器不支持音频播放，请使用最新版浏览器。
             </audio>
         </div>
@@ -153,10 +150,10 @@
     </div>
 
     <script>
-        fetch('https://raw.githubusercontent.com/liukai2026/dizangwang/main/jingwen.txt')
+        fetch('https://liukai2026.github.io/dizangwang/jingwen.txt')
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('经文文件加载失败，请确认 jingwen.txt 已上传');
+                    throw new Error('经文文件加载失败，请确认文件已上传');
                 }
                 return response.text();
             })
