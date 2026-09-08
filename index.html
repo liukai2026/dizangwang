@@ -99,8 +99,9 @@
 <body>
 <div class="container">
 
+    <!-- 佛像：使用维基百科的稳定图片 -->
     <img class="buddha-image"
-         src="F87C0BBC31E8F4F3 (1).png"
+         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ksitigarbha_Bodhisattva_%28Di_Zang_Wang_Pu_Sa%29.jpg/800px-Ksitigarbha_Bodhisattva_%28Di_Zang_Wang_Pu_Sa%29.jpg"
          alt="地藏王菩萨"
          loading="lazy" />
 
@@ -113,7 +114,8 @@
 
     <div class="audio-wrapper">
         <audio controls loop autoplay>
-            <source src="61-256-0001 (333).mp3" type="audio/mpeg">
+            <!-- 使用华藏数位图书馆的地藏经音频（稳定、可公开访问） -->
+            <source src="https://edu.hwadzan.tv/download/61/257/mp3" type="audio/mpeg">
             您的浏览器不支持音频播放。
         </audio>
     </div>
@@ -122,9 +124,10 @@
 </div>
 
 <script>
-fetch('https://liukai2026.github.io/dizangwang/jingwen.txt')
+// 经文从你仓库的 jingwen.txt 加载
+fetch('jingwen.txt')
     .then(response => {
-        if (!response.ok) throw new Error('经文加载失败');
+        if (!response.ok) throw new Error('经文文件加载失败，请确认 jingwen.txt 已上传');
         return response.text();
     })
     .then(text => {
